@@ -14,6 +14,8 @@
 		E2185BB01E20A2A10035324F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2185BAE1E20A2A10035324F /* LaunchScreen.storyboard */; };
 		E2185BBB1E20A2A20035324F /* Mockup_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BBA1E20A2A20035324F /* Mockup_TestTests.swift */; };
 		E2185BC61E20A2A30035324F /* Mockup_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BC51E20A2A30035324F /* Mockup_TestUITests.swift */; };
+		E2185BD41E20A38B0035324F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BD31E20A38B0035324F /* MainViewController.swift */; };
+		E2185BD61E20A39B0035324F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BD51E20A39B0035324F /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		E2185BC11E20A2A30035324F /* Mockup_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mockup_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2185BC51E20A2A30035324F /* Mockup_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockup_TestUITests.swift; sourceTree = "<group>"; };
 		E2185BC71E20A2A30035324F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2185BD31E20A38B0035324F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E2185BD51E20A39B0035324F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				E2185BAC1E20A2A10035324F /* Assets.xcassets */,
 				E2185BAE1E20A2A10035324F /* LaunchScreen.storyboard */,
 				E2185BB11E20A2A10035324F /* Info.plist */,
+				E2185BD31E20A38B0035324F /* MainViewController.swift */,
+				E2185BD51E20A39B0035324F /* DetailViewController.swift */,
 			);
 			path = Mockup_Test;
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2185BD41E20A38B0035324F /* MainViewController.swift in Sources */,
 				E2185BA81E20A2A10035324F /* ViewController.swift in Sources */,
 				E2185BA61E20A2A10035324F /* AppDelegate.swift in Sources */,
+				E2185BD61E20A39B0035324F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
