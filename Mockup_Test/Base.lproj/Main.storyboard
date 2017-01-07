@@ -27,14 +27,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellId" id="A1P-ca-cdq">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellId" id="A1P-ca-cdq" customClass="MainViewCell" customModule="Mockup_Test" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A1P-ca-cdq" id="Rdz-y9-DaH">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="79"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i3w-d4-tVK">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i3w-d4-tVK">
                                                     <rect key="frame" x="8" y="8" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="UbO-Ei-rGY"/>
@@ -62,7 +62,6 @@
                                                 <constraint firstItem="z47-oe-wd2" firstAttribute="leading" secondItem="REd-Fe-ZIL" secondAttribute="leading" id="4gm-mK-Vbi"/>
                                                 <constraint firstItem="z47-oe-wd2" firstAttribute="trailing" secondItem="REd-Fe-ZIL" secondAttribute="trailing" id="HPf-3g-W9x"/>
                                                 <constraint firstItem="z47-oe-wd2" firstAttribute="leading" secondItem="i3w-d4-tVK" secondAttribute="trailing" constant="8" symbolic="YES" id="OdW-Nu-69V"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="i3w-d4-tVK" secondAttribute="bottom" id="Pfc-Bm-6cr"/>
                                                 <constraint firstItem="i3w-d4-tVK" firstAttribute="bottom" secondItem="z47-oe-wd2" secondAttribute="bottom" id="RZI-dG-Lka"/>
                                                 <constraint firstItem="i3w-d4-tVK" firstAttribute="top" secondItem="REd-Fe-ZIL" secondAttribute="top" id="UA2-mD-XNu"/>
                                                 <constraint firstItem="z47-oe-wd2" firstAttribute="top" secondItem="REd-Fe-ZIL" secondAttribute="bottom" id="YbO-SQ-XzZ"/>
@@ -73,8 +72,17 @@
                                                 <constraint firstItem="REd-Fe-ZIL" firstAttribute="leading" secondItem="i3w-d4-tVK" secondAttribute="trailing" constant="8" symbolic="YES" id="zhh-Wx-RAh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageModel" destination="i3w-d4-tVK" id="74p-Xl-U5Q"/>
+                                            <outlet property="subTitleModelLabel" destination="z47-oe-wd2" id="szA-3Z-WWb"/>
+                                            <outlet property="titleModelLabel" destination="REd-Fe-ZIL" id="2oU-Wz-ozs"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bLx-ek-W8b"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uGN-hl-ofd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,9 +93,12 @@
                             <constraint firstItem="QrH-Hv-2aB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="uTO-8e-ph6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Main View" id="bWB-3I-1gs"/>
+                    <navigationItem key="navigationItem" title="Main View" id="bWB-3I-1gs">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7zT-gg-SAx"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="sZ6-Xe-G0Y" kind="show" id="tTo-Rg-1uo"/>
+                        <outlet property="tableView" destination="QrH-Hv-2aB" id="mHM-It-56o"/>
+                        <segue destination="sZ6-Xe-G0Y" kind="show" identifier="detailSegue" id="tTo-Rg-1uo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,7 +117,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="otM-sX-wsY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="otM-sX-wsY">
                                 <rect key="frame" x="16" y="72" width="343" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="otM-sX-wsY" secondAttribute="height" multiplier="16:9" id="njM-Z7-RtR"/>
@@ -147,6 +158,11 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail View" id="DFR-xx-kKn"/>
+                    <connections>
+                        <outlet property="imageDetail" destination="otM-sX-wsY" id="76x-KL-ORv"/>
+                        <outlet property="subTitleDetailLabel" destination="oiW-ZG-YNe" id="kDy-sL-zAk"/>
+                        <outlet property="titleDetailLabel" destination="YoJ-YB-NmP" id="gVH-qe-8ik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZDo-t5-uKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

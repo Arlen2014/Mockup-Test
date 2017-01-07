@@ -16,6 +16,8 @@
 		E2185BC61E20A2A30035324F /* Mockup_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BC51E20A2A30035324F /* Mockup_TestUITests.swift */; };
 		E2185BD41E20A38B0035324F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BD31E20A38B0035324F /* MainViewController.swift */; };
 		E2185BD61E20A39B0035324F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BD51E20A39B0035324F /* DetailViewController.swift */; };
+		E2185BD91E20A9D50035324F /* RefViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BD81E20A9D50035324F /* RefViewController.swift */; };
+		E2185BDD1E20AB4E0035324F /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2185BDC1E20AB4E0035324F /* model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		E2185BC71E20A2A30035324F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2185BD31E20A38B0035324F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E2185BD51E20A39B0035324F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E2185BD81E20A9D50035324F /* RefViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefViewController.swift; sourceTree = "<group>"; };
+		E2185BDC1E20AB4E0035324F /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +105,10 @@
 		E2185BA41E20A2A10035324F /* Mockup_Test */ = {
 			isa = PBXGroup;
 			children = (
-				E2185BA51E20A2A10035324F /* AppDelegate.swift */,
-				E2185BA71E20A2A10035324F /* ViewController.swift */,
+				E2185BD71E20A9A80035324F /* Support */,
+				E2185BDA1E20AB2D0035324F /* Model */,
+				E2185BDB1E20AB330035324F /* Controllers */,
 				E2185BA91E20A2A10035324F /* Main.storyboard */,
-				E2185BAC1E20A2A10035324F /* Assets.xcassets */,
-				E2185BAE1E20A2A10035324F /* LaunchScreen.storyboard */,
-				E2185BB11E20A2A10035324F /* Info.plist */,
-				E2185BD31E20A38B0035324F /* MainViewController.swift */,
-				E2185BD51E20A39B0035324F /* DetailViewController.swift */,
 			);
 			path = Mockup_Test;
 			sourceTree = "<group>";
@@ -129,6 +129,36 @@
 				E2185BC71E20A2A30035324F /* Info.plist */,
 			);
 			path = Mockup_TestUITests;
+			sourceTree = "<group>";
+		};
+		E2185BD71E20A9A80035324F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E2185BA51E20A2A10035324F /* AppDelegate.swift */,
+				E2185BA71E20A2A10035324F /* ViewController.swift */,
+				E2185BAE1E20A2A10035324F /* LaunchScreen.storyboard */,
+				E2185BAC1E20A2A10035324F /* Assets.xcassets */,
+				E2185BB11E20A2A10035324F /* Info.plist */,
+				E2185BD81E20A9D50035324F /* RefViewController.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		E2185BDA1E20AB2D0035324F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2185BDC1E20AB4E0035324F /* model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E2185BDB1E20AB330035324F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E2185BD31E20A38B0035324F /* MainViewController.swift */,
+				E2185BD51E20A39B0035324F /* DetailViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2185BD41E20A38B0035324F /* MainViewController.swift in Sources */,
+				E2185BDD1E20AB4E0035324F /* model.swift in Sources */,
 				E2185BA81E20A2A10035324F /* ViewController.swift in Sources */,
 				E2185BA61E20A2A10035324F /* AppDelegate.swift in Sources */,
+				E2185BD91E20A9D50035324F /* RefViewController.swift in Sources */,
 				E2185BD61E20A39B0035324F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

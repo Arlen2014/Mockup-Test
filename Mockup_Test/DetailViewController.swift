@@ -10,26 +10,59 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    // MARK: - Instance variables
+    
+    var detailModel: model?
+//    {
+//        didSet {
+//            
+//            print("DETAIL SEGUE: \(detailModel)")
+//        }
+//    }
+    
+    // MARK: - Interface
+    
+    @IBOutlet weak var imageDetail: UIImageView!
+    @IBOutlet weak var titleDetailLabel: UILabel!
+    @IBOutlet weak var subTitleDetailLabel: UITextView!
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        if let image = detailModel?.imageModel {
+            
+            imageDetail.image = UIImage(named: image)
+        }
+        
+        if let titleDetail = detailModel?.titleModel {
+            
+            titleDetailLabel.text = titleDetail
+        }
+        
+        if let subTitleDetail = detailModel?.subTitleModel {
+            
+            subTitleDetailLabel.text = subTitleDetail
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    // MARK: - Custom Functions
+    
+    // MARK: - Custom Buttons
+    
 }
+
+// MARK: - Extensions
+
+// MARK: - Cell Class
+
+// MARK: - Interface Cell
+
+// MARK: - Life Cycle Cell
+
+// MARK: - Custom Functions Cell
+
+// MARK: - Instance variables Cell
+
