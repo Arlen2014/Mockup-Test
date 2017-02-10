@@ -7,18 +7,13 @@
 //
 
 import UIKit
+import ZoomTransitioning
 
 class DetailViewController: UIViewController {
 
     // MARK: - Instance variables
     
     var detailModel: model?
-//    {
-//        didSet {
-//            
-//            print("DETAIL SEGUE: \(detailModel)")
-//        }
-//    }
     
     // MARK: - Interface
     
@@ -45,24 +40,35 @@ class DetailViewController: UIViewController {
             
             subTitleDetailLabel.text = subTitleDetail
         }
-        
     }
-    
-    // MARK: - Custom Functions
-    
-    // MARK: - Custom Buttons
-    
 }
 
-// MARK: - Extensions
+// MARK: - Extensions - ZoomTransitionSourceDelegate
 
-// MARK: - Cell Class
-
-// MARK: - Interface Cell
-
-// MARK: - Life Cycle Cell
-
-// MARK: - Custom Functions Cell
-
-// MARK: - Instance variables Cell
-
+extension DetailViewController: ZoomTransitionDestinationDelegate {
+    
+    func transitionDestinationImageViewFrame(forward: Bool) -> CGRect {
+        if forward {
+            let x: CGFloat = 16.0
+            let y = topLayoutGuide.length
+            let width = view.frame.width - 32
+            let height = width * 9.0 / 16.0
+            return CGRect(x: x, y: y, width: width, height: height)
+        } else {
+            return imageDetail.convert(imageDetail.bounds, to: view)
+        }
+    }
+    
+    func transitionDestinationWillBegin() {
+        imageDetail.isHidden = true
+    }
+    
+    func transitionDestinationDidEnd(transitioningImageView imageView: UIImageView) {
+        imageDetail.isHidden = false
+        imageDetail.image = imageView.image
+    }
+    
+    func transitionDestinationDidCancel() {
+        imageDetail.isHidden = false
+    }
+}
